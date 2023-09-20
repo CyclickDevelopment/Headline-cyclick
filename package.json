@@ -76,6 +76,10 @@
                 "type": "text",
                 "group": "homepage"
             },
+            "enter_excluded_tag_slugs_for_primary_sections": {
+                "type": "text",
+                "group": "homepage"
+            },
             "enter_tag_slugs_for_secondary_sections": {
                 "type": "text",
                 "group": "homepage"
@@ -104,3 +108,4 @@
         "pump": "3.0.0"
     }
 }
+
