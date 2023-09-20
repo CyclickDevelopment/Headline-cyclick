@@ -56,7 +56,7 @@
         {{/match}}
 
         {{#if @custom.enter_tag_slugs_for_secondary_sections}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}},-{{@custom.enter_excluded_tag_slugs_for_primary_sections}}]"}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
                 {{#if tags}}
                     <div class="gh-topic-list">
                         {{#foreach tags}}
