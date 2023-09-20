@@ -48,7 +48,7 @@
         </section>     
 
         {{#match posts.length ">" 1}}
-                {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
+                {{#get "tags" filter="slug:[-{{@custom.enter_excluded_tag_slugs_for_primary_sections}}]" include="count.posts" order="count.posts desc" limit="3"}}
                     {{#foreach tags}}
                         {{> "topic-grid"}}
                     {{/foreach}}
