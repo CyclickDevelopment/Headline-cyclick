@@ -6,7 +6,7 @@
         {{#if @custom.enter_tag_slugs_for_primary_sections}}
             {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_primary_sections}}]"}}
                 {{#foreach tags}}
-                    {{> "loop-grid"}}
+                    {{> "topic-grid"}}
                 {{/foreach}}
             {{/get}}
         {{else}}
