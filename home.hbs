@@ -10,13 +10,7 @@
                 {{/foreach}}
             {{/get}}
         {{else}}
-            {{#match posts.length ">" 1}}
-                {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
-                    {{#foreach tags}}
-                        {{> "topic-grid"}}
-                    {{/foreach}}
-                {{/get}}
-            {{/match}}
+            
         {{/if}}
 
         <section class="gh-topic gh-topic-grid">
@@ -40,6 +34,14 @@
                 {{/match}}
             </footer>
         </section>     
+
+        {{#match posts.length ">" 1}}
+                {{#get "tags" include="count.posts" order="count.posts desc" limit="3"}}
+                    {{#foreach tags}}
+                        {{> "topic-grid"}}
+                    {{/foreach}}
+                {{/get}}
+        {{/match}}
 
         {{#if @custom.enter_tag_slugs_for_secondary_sections}}
             {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
